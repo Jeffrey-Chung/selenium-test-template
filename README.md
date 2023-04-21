@@ -1,8 +1,8 @@
 # Selenium-Test-Template
 
 This is a template that can run your Selenium tests locally and on GitHub Actions.
-`selenium_local.py`: Runs your tests locally (make sure Firefox is installed)
-`selenium_global.py`: Runs your test on GitHub Actions
+* `selenium_local.py`: Runs your tests locally (make sure Firefox is installed)
+* `selenium_global.py`: Runs your test on GitHub Actions
 
 You can either Fork/Clone my repository. Instructions are down below
 
