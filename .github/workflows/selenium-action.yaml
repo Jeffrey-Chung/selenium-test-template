@@ -29,7 +29,7 @@ jobs:
         run: ./wait-for-grid.sh
       
       - name: Running the Python file
-        run: python3 test_uts_chinese_website.py
+        run: python3 selenium_grid.py
 
       - name: Setdown Docker Compose
         run: docker-compose -f docker-compose.yaml down

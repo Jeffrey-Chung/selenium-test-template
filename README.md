@@ -1,67 +1,31 @@
-# uts-chinese-website-ui-test
-<div align="center">
-  <img height="400" src="https://i.imgur.com/s0CDqF5.png" />
+# Selenium-Test-Template
 
-   <br>
-  <small> <b><i>Show your support!</i> </b></small>
-  <br>
-   <a href="https://github.com/MarketingPipeline/Python-Selenium-Action">
-    <img title="Star on GitHub" src="https://img.shields.io/github/stars/MarketingPipeline/Python-Selenium-Action.svg?style=social&label=Star">
-  </a>
-  <a href="https://github.com/MarketingPipeline/Python-Selenium-Action/fork">
-    <img title="Fork on GitHub" src="https://img.shields.io/github/forks/MarketingPipeline/Python-Selenium-Action.svg?style=social&label=Fork">
-  </a>
-   </p>  
- 
- 
+This is a template that can run your Selenium tests locally and on GitHub Actions.
+`selenium_local.py`: Runs your tests locally (make sure Firefox is installed)
+`selenium_global.py`: Runs your test on GitHub Actions
+
+You can either Fork/Clone my repository. Instructions are down below
+
+## Fork Repository
+
+1. Simply click on the Fork button at the top right of my repo on Github
+2. Make sure you keep the "Copy the master branch only" option ticked so that you can add your own branches later on
+3. Copy the SSH URL of the repo (i.e.: `git@github.com:Jeffrey-Chung/<repo name>.git`)
+4. Run the command `git clone <SSH URL>` on your terminal 
 
 
-   
- 
-No need to struggle to figure out how to run a Python Selenium script with a  [GitHub Action](https://github.com/features/actions). 
-  This is a <b>ready to use</b> template for running Selenium with Python via [GitHub Actions](https://github.com/features/actions) on non-headless. <br> 
-</div>
+## Clone Repository
+Assuming that you have created a SSH key already 
+
+1. Copy the SSH URL of the repo (i.e.: `git@github.com:Jeffrey-Chung/<repo name>.git`)
+2. Run the command `git clone <SSH URL>` on your terminal
+3. Move to the directory and run `git remote rm origin` so that your progress doesn't affect my repo
+4. Create a new repo on GitHub and add your origin to your directory
 
 
+## Usage
+Follow this once you either fork/clone my repo
 
-## Example and usage
-
-
-To use <b><i>Github Action</b></i>:
-
-- Push/merge any code to the main branch and it will run the tests on the UTS website on Windows
-
-- Make changes as needed to the Python script <code>test_uts_chinese_website.py</code>. 
-
-- Make changes as needed to the <code>selenium-action.yaml</code> file.
-
-
-<br>
-
-#### Demo(s) 
-
-
-<br> 
-An example of the script sucessfully running on GitHub:
-<br>
-
-
-- [Successful Action Run](https://github.com/Jeffrey-Chung/test-uts-selenium-website/actions/runs/4320123273)
-- Demo on YouTube will be uploaded soon
-
-
-#### Branches:
-- main, selenium-grid: Run tests on Selenium Grid
-- selenium-grid: Run tests on Selenium
-  
-## Contributing
-
-Want to improve this? Create a pull request with detailed changes / improvements! If approved you will be added to the list of contributors of this awesome project!
-
-
-
-See also the list of
-[contributors](https://github.com/Jeffrey-Chung/uts-chinese-website-ui-test/graphs/contributors) who
-participate in this project.
-
-
+1. Add the link of your website to test on the `'''INSERT YOUR URL'''` prompts in both scripts
+2. Write all your tests in the try block on the `ui_test` function in `selenium_local.py`
+3. Once you push all your progress on the main branch, GitHub Actions will be ran

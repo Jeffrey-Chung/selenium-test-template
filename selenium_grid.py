@@ -1,5 +1,9 @@
+'''
+This script will be ran on Github Actions. It will run the tests on Firefox, Chrome and Edge respectively.
+In theory, you don't need to change anything on this script except adding your link to the driver.
+'''
 from selenium import webdriver
-from draft_tests_uts_chinese_website import ui_test
+from selenium_local import ui_test
 
 # define ze options
 firefox_options = webdriver.FirefoxOptions()
@@ -8,8 +12,9 @@ edge_options = webdriver.EdgeOptions()
 
 #chrome_options.add_argument("--disable-dev-shm-usage")
 
-#function to set same options for each browser
+#function to set the same options for each browser
 def set_options(driver_options):
+        #Uncomment the line below if you want to run your tests on headless
         #driver_options.add_argument("--headless")
         driver_options.add_argument("--ignore-certificate-errors")
         driver_options.add_argument("--kiosk")
@@ -25,8 +30,8 @@ def setup_driver(driver_options):
         options=driver_options
         )
 
-        #Load the uts website
-        driver.get('https://utsaustralia.cn/')
+        #Make sure you paste your URL in the line below
+        driver.get('''INSERT LINK HERE''')
         return driver
 
 firefox_driver = setup_driver(firefox_options)
