@@ -26,6 +26,6 @@ Assuming that you have created a SSH key already
 ## Usage
 Follow this once you either fork/clone my repo
 
-1. Add the link of your website to test on the `'''INSERT YOUR URL'''` prompts in both scripts
+1. Add the link of your website to test on the `'''INSERT URL HERE'''` prompts in both scripts
 2. Write all your tests in the try block on the `ui_test` function in `selenium_local.py`
 3. Once you push all your progress on the main branch, GitHub Actions will be ran

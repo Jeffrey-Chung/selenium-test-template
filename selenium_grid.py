@@ -31,7 +31,7 @@ def setup_driver(driver_options):
         )
 
         #Make sure you paste your URL in the line below
-        driver.get('''INSERT LINK HERE''')
+        driver.get('''INSERT URL HERE''')
         return driver
 
 firefox_driver = setup_driver(firefox_options)
