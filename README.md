@@ -23,10 +23,16 @@ Assuming that you have created a SSH key already
 4. Create a new repo on GitHub and add your origin to your directory
 
 
-## Usage
+## Usage (GitHub Actions)
 Follow this once you either fork/clone my repo
 
 1. Add the link of your website to test on the `'''INSERT URL HERE'''` prompts in both scripts
 2. Write all your tests in the try block on the `ui_test` function in `selenium_local.py`
 3. Once you push all your progress on the main branch, GitHub Actions will be ran
-4. If you want to run your tests locally, type the ``python3 selenium_local.py`` command on your terminal
+
+
+## Local Usage
+1. Run ``java -jar selenium-server-4.8.1.jar standalone`` command on one terminal
+2. Run your script with the command ``python3 selenium_local.py`` on another terminal in the same directory
+NOTE: Make sure both terminals are moved to the same directory
+3. Once the script has ran, you can terminate the server via ``ctrl + c`` on the terminal in step 1. 
