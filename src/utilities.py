@@ -1,16 +1,12 @@
 '''
-This script will be ran on Github Actions. It will run the tests on Firefox, Chrome and Edge respectively.
+This script stores all the common functions between the 3 test files. Including setup the drivers and the tests itself
 In theory, you don't need to change anything on this script except adding your link to the driver.
 '''
 from selenium import webdriver
-from selenium_local import ui_test
-
-# define ze options
-firefox_options = webdriver.FirefoxOptions()
-chrome_options = webdriver.ChromeOptions()
-edge_options = webdriver.EdgeOptions()
-
-#chrome_options.add_argument("--disable-dev-shm-usage")
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 #function to set the same options for each browser
 def set_options(driver_options):
@@ -19,9 +15,6 @@ def set_options(driver_options):
         driver_options.add_argument("--ignore-certificate-errors")
         driver_options.add_argument("--kiosk")
 
-set_options(firefox_options)
-set_options(chrome_options)
-set_options(edge_options)
 
 #Function to configure settings for each driver
 def setup_driver(driver_options):
@@ -34,12 +27,23 @@ def setup_driver(driver_options):
         driver.get('''INSERT URL HERE''')
         return driver
 
-firefox_driver = setup_driver(firefox_options)
-chrome_driver = setup_driver(chrome_options)
-edge_driver = setup_driver(edge_options)
+# Run deez tests!
+def ui_test(driver):
+        try:
+                print("Tests will be ran")
+                #Write all your tests in the line below, make sure your code is indented correctly.
 
 
-if __name__ == "__main__":
-        ui_test(firefox_driver)
-        ui_test(chrome_driver)
-        ui_test(edge_driver)
+
+
+
+
+
+                #But above this line :)
+        finally:
+                #prints the url that was last loaded
+                print(driver.current_url)
+                #Quits the browser, hence finishing the session
+                driver.quit()
+
+
