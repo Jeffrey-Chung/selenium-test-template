@@ -10,7 +10,7 @@ import utilities
 if __name__ == "__main__":
         firefox_options = webdriver.FirefoxOptions()
         utilities.set_options(firefox_options)  
-        #Configure the driver
+        # Configure the driver
         firefox_driver = utilities.setup_driver(firefox_options)
         utilities.ui_test(firefox_driver)
 

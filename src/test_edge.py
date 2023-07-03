@@ -10,7 +10,7 @@ import utilities
 if __name__ == "__main__":
         edge_options = webdriver.EdgeOptions()
         utilities.set_options(edge_options)  
-        #Configure the driver
+        # Configure the driver
         edge_driver = utilities.setup_driver(edge_options)
         utilities.ui_test(edge_driver)
 

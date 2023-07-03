@@ -10,7 +10,7 @@ import utilities
 if __name__ == "__main__":
         chrome_options = webdriver.ChromeOptions()
         utilities.set_options(chrome_options)  
-        #Configure the driver
+        # Configure the driver
         chrome_driver = utilities.setup_driver(chrome_options)
         utilities.ui_test(chrome_driver)
 
